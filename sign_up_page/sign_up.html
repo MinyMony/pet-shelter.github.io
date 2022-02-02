@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleSignUp.css">
+
+    <script>
+        function validate() {
+
+            event.preventDefault()
+
+            passwardWarning.hidden = true;
+            usernameWarning.hidden = true;
+            passwardConfirmWarning.hidden = true;
+
+            if (document.getElementById("username").value.length < 2)
+                usernameWarning.hidden = false;
+
+
+            if (document.getElementById("passward").value.length < 3)
+                document.getElementById("passwardWarning").hidden = false;
+
+
+            if (document.getElementById("passward").value != document.getElementById("passwardConfirm").value)
+                passwardConfirmWarning.hidden = false;
+
+
+            if (document.getElementById("username").value.length >= 2 && document.getElementById("passward").value.length >= 3 && document.getElementById("passward").value == document.getElementById("passwardConfirm").value) {
+                window.location.href = "../home_page/homePage.html";
+            }
+        }
+
+    </script>
+</head>
+<body dir="rtl">
+
+    <button id="home" onclick="window.location.href='../home_page/homePage.html'">Back To Home Page</button>
+    <div id="document1" class="center">
+
+        <form name="signUpForm" onsubmit="validate();">
+            <div id="signUpDoc" class="split right">
+
+                <h2>הרשמה לאתר <img id="symbol2" src="../website_symbol.png" /></h2>
+
+
+                <label id="firstNameText">שם פרטי</label>
+                <label id="lastNameText">שם משפחה</label>
+
+                <br />
+                <input id="firstName" type="text" required />
+
+                <input id="lastName" type="text" />
+
+                <br /><br />
+                מין:
+                <input type="radio" id="genderFemale" name="Gender" onclick="document.getElementById('genderOtherText').hidden = true;" &nbsp />נקבה
+                <input type="radio" id="genderMale" name="Gender" onclick="document.getElementById('genderOtherText').hidden = true;" &nbsp />זכר
+                <input type="radio" id="genderOther" name="Gender" onclick="document.getElementById('genderOtherText').hidden = false;" &nbsp />אחר
+                <input type="text" id="genderOtherText" hidden="hidden" />
+
+                <br /><br />
+                <label id="birthDateText">תאריך לידה</label>
+                <lable id="countryText">מדינה</lable>
+                <br />
+                <input id="birthDate" type="date" />
+
+                <select name="Country">
+                    <option> </option>
+                    <option>ישראל</option>
+                    <option>ארצות הברית</option>
+                    <option>אנגליה</option>
+                    <option>צרפת</option>
+                    <option>ספרד</option>
+                    <option>יפן</option>
+                </select>
+
+                <br /><br />
+                שנות ניסיון עם חיות
+                <br />
+                <input id="number" type="number" />
+                <br /><br />
+
+                שם משתמש
+                <br />
+                <input id="username" type="text" required />
+                <div id="usernameWarning" hidden="hidden">
+                    *שם המשתמש חייב להיות לפחות 2 תווים*
+                </div>
+
+                <br /><br />
+                כתובת אימייל
+                <br />
+                <input id="email" type="email" />
+
+                <br /><br />
+                סיסמא
+                <br />
+                <input id="passward" type="password" required />
+                <div id="passwardWarning" hidden="hidden">
+                    *הסיסמא חייבת להיות לפחות 3 תווים*
+                </div>
+
+
+                <br /><br />
+                אימות סיסמא
+                <br />
+                <input id="passwardConfirm" type="password" required />
+                <div id="passwardConfirmWarning" hidden="hidden">
+                    *אימות הסיסמה לא זהה לסיסמא*
+                </div>
+
+                <br /><br />
+                <input type="checkbox" required />מוכן לאמץ חיות!
+
+                <br /><br /><br />
+                <button type="submit" class="chosen"> שלח </button>
+                <button type="reset"> אפס </button>
+
+
+            </div>
+
+            <br />
+        </form>
+
+    </div>
+
+</body>
+</html>
+

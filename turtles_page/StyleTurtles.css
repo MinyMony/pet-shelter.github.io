@@ -1,0 +1,38 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', Fallback, sans-serif;
+}
+
+body {
+    color: black;
+    direction: ltr;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Secular One';
+    margin: 0;
+}
+
+
+
+
+
+#main {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+/**/
+
+
+#donatelloPic, #leonardoPic, #raphaelPic, #sheldonPic {
+    border-radius: 10px;
+    width: 340px;
+    height: 360px;
+}
+

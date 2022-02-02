@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleContact.css">
+</head>
+<body dir="rtl">
+    <script>
+
+        function func() {
+            event.preventDefault();
+            document.getElementById("home1").style.display = "none";
+            document.getElementById("contact").style.display = "none";
+            document.getElementById("confirm").hidden = false;
+            document.getElementById("document1").style.height = "200px";
+        }
+    </script>
+
+    <button id="home1" onclick="window.location.href='../home_page/homePage.html'" style="display:block">בחזרה לעמוד הבית</button>
+    <div id="document1" class="center">
+        <form id="contact" style="display:block" onsubmit="func()">
+            <h1>צור איתנו קשר</h1>
+
+            <br />
+            <lable>שם מלא</lable>
+            <br />
+            <input type="text" required />
+
+            <br /><br />
+            <lable>כתובת אימייל</lable>
+            <br />
+            <input type="email" required />
+
+            <br /><br />
+            <lable>שם החיה</lable>
+            <br />
+            <input type="text" />
+
+            <br /><br /><br />
+            <lable>הערות</lable>
+
+            <br />
+            <textarea id="notes"></textarea>
+
+
+
+            <br /><br /><br /><br />
+            <button type="submit"> שלח </button>
+        </form>
+        <div id="confirm" class="center" hidden="hidden">
+            <h1>הזמנתך אושרה ותיראה בקרוב ליוצרים</h1>
+
+            <br /><br />
+            תודה רבה לך על העזרה למציאת בתים לחיות האלו!
+            <br /> אתה עוזר לעשות שינוי ועוזר להציל חיים!
+
+            <br /><br />
+            <button id="home2" onclick="window.location.href='../home_page/homePage.html'">בחזרה לעמוד הבית</button>
+
+        </div>
+    </div>
+
+</body>
+   
+</html>
+
+

@@ -1,0 +1,70 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', Fallback, sans-serif;
+}
+
+body {
+    color: black;
+    direction:ltr;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Secular One';
+    margin: 0;
+}
+
+
+
+
+
+#main {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+#foxPic {
+    border-radius: 10px;
+    width: 340px;
+    height: 370px;
+}
+
+
+#picklesPic {
+    border-radius: 10px;
+    width: 270px;
+    height: 340px;
+
+}
+
+
+#toodlesPic {
+    border-radius:10px;
+    width: 290px;
+    height: 410px;
+}
+
+
+
+#mezzoPic {
+    top: 0;
+    padding-top: 0;
+    width: 310px;
+    height: 390px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
